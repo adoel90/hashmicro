@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, IconButton, Grid} from '@material-ui/core'
+import { Box, IconButton } from '@material-ui/core'
 import { useTheme, makeStyles, fade } from '@material-ui/core/styles'
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -8,7 +8,6 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import pictBackground from '../images/backgorund.jpg'
 import logo from '../images/logowhite.png'
-
 
 const useStyles = makeStyles((theme) => ({
 
@@ -45,51 +44,52 @@ const useStyles = makeStyles((theme) => ({
         '&:hover':{
             border: `1px solid ${theme.palette.secondary.light}`, 
             color: `${theme.palette.secondary.light}`, 
+            boxShadow: 'inset 0 0 0 white',
         }  
     }
 }))
-const Header = () => {
-
-    // const theme = useTheme()
+const Header = props => {    
+    const theme = useTheme()
     const classes = useStyles();   
 
     return (
-        
-        <Box
-            style={{
-                backgroundImage: `url(${pictBackground})`,
-                backgroundSize: 'cover', 
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                background: 'contain',
-                filter: 'blur(0.5px)'
-                
 
-            }}
-        >
-            <Box display='flex' flexDirection='row' justifyContent='center'>
-                <Box mt={8}>
-                    <img src={logo} alt='logo' />
-                </Box>              
+        <>          
+            <Box
+                style={{
+                    backgroundImage: `url(${pictBackground})`,
+                    backgroundSize: 'cover', 
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    background: 'contain',
+                    filter: 'blur(0.5px)'                    
+                }}
+            >
+                <Box display='flex' flexDirection='row' justifyContent='center'>
+                    <Box mt={8}>
+                        <img src={logo} alt='logo' />
+                    </Box>              
+                </Box>
+            
+                <Box display='flex' flexDirection='row' justifyContent='center'>          
+                    {
+                        dummyData.map((item, i) => {
+                            return (
+
+                                <Box mb={8} mt={2} key={i}>                   
+                                    <IconButton aria-label="fb" className={item.id == 5 ? classes.iconWithoutLine : classes.icon} >
+                                        {item.icon}
+                                    </IconButton>                                       
+                                </Box> 
+                            )
+                        })
+                    }
+                </Box>
+            
+
             </Box>
-           
-            <Box display='flex' flexDirection='row' justifyContent='center'>          
-                {
-                    dummyData.map((item, i) => {
-                        return (
-
-                            <Box mb={8} mt={2} key={i}>                   
-                                <IconButton aria-label="fb" className={item.id == 5 ? classes.iconWithoutLine : classes.icon} >
-                                    {item.icon}
-                                </IconButton>                                       
-                            </Box> 
-                        )
-                    })
-                }
-            </Box>
+        </>
         
-
-        </Box>
     )
 };
 

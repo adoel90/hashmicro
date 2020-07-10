@@ -208,4 +208,30 @@ const dummyData = [
         url: pict6,
         width: '30%'
     },
+    {
+        id: 7,
+        title: "Stories",
+        subtitle: "Diary of Mine",
+        date: 'August 20, 2015',
+        url: pict3,
+        width: '30%'
+    },
+
+    {
+        id: 8,
+        title: "Story",
+        subtitle: "Travel the World",
+        date: 'August 20, 2015',
+        url: pict2,
+        width: '40%'
+    },
+    {
+        id: 9,
+        title: "Repice",
+        subtitle: "Autumn Chesnut Rice",
+        date: 'August 7, 2015',
+        url: pict1,
+        width: '30%'
+    },
+
 ]

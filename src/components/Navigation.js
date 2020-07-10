@@ -26,7 +26,7 @@ const Navigation = () => {
                         <Typography color="primary" variant='subtitle2'>Light Version</Typography>                      
                     </Link>
 
-                    <Typography color="primary" variant='subtitle2' style={{opacity: 0.6}} contentEditable='true'>
+                    <Typography color="primary" variant='caption' style={{opacity: 0.6}} contentEditable='true'>
                         <i>Search and hit enter ...</i> &nbsp;
                         <IconButton size='small'>
                             <SearchIcon fontSize='small' />
