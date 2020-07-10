@@ -7,7 +7,7 @@ import logo from '../images/logowhite.png'
 const HeaderBar = props => {  
 
     const theme = useTheme()  
-    const [hideOnScroll, setHideOnScroll] = useState(false)   
+    const [hideOnScroll, setHideOnScroll] = useState(true)   
 
     useScrollPosition(
 
