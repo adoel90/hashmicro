@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles, useTheme, fade } from '@material-ui/core/styles';
 import { ButtonBase, Typography, Box } from '@material-ui/core';
 
 import pict1 from '../images/1.jpg'
@@ -32,10 +32,11 @@ const useStyles = makeStyles(theme => ({
                 opacity: 0.4,
               },
               '& $imageMarked': {
-                opacity: 0,
+                opacity: 0                
               },
               '& $imageTitle': {
-                border: '4px solid currentColor',
+                outline: `4px solid ${theme.palette.secondary.dark}`,
+                border: `4px solid ${theme.palette.common.transparent}`,
                 backgroundColor: theme.palette.common.transparent,
               },
             },
@@ -75,7 +76,8 @@ const useStyles = makeStyles(theme => ({
             position: 'relative',
             padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
             backgroundColor: theme.palette.common.black,
-            border: `4px solid ${theme.palette.common.black}`
+            border: `4px solid ${fade(theme.palette.common.white, 0.7)}`,
+            outline: `4px solid black`
             
           },
           imageMarked: {//*will be change
@@ -114,9 +116,7 @@ const CardsImage = () => {
                     />
                     <span className={classes.imageBackdrop} />
                     
-                    <span className={classes.imageButton}>
-                        
-
+                    <span className={classes.imageButton}>                    
                         <Typography
                             component="span"
                             variant="subtitle1"
@@ -124,7 +124,7 @@ const CardsImage = () => {
                             className={classes.imageTitle}
                             contentEditable='true'
                         >
-                            <span style={{color: 'orange'}}>• • • </span> &nbsp; {image.title} &nbsp; <span style={{color: 'orange'}}>• • • </span>
+                            <span style={{color: `${theme.palette.secondary.dark}`}}>• • • </span> &nbsp; {image.title} &nbsp; <span style={{color: `${theme.palette.secondary.dark}`}}>• • • </span>
                             <br />                           
                             <Typography 
                                 component="span"

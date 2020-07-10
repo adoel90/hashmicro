@@ -13,16 +13,16 @@ const Navigation = () => {
                     <Link color="inherit" href="/" >
                         <Typography color="primary" variant='subtitle2'>Home</Typography>                    
                     </Link>
-                    <Link color="inherit" href="/getting-started/installation/" >
+                    <Link color="inherit" href="/" >
                         <Typography color="primary" variant='subtitle2'>Features</Typography>                       
                     </Link>
-                    <Link color="inherit" href="/getting-started/installation/" >
+                    <Link color="inherit" href="/" >
                         <Typography color="primary" variant='subtitle2'>Layouts</Typography>                       
                     </Link>
-                    <Link color="inherit" href="/getting-started/installation/" >
+                    <Link color="inherit" href="/" >
                         <Typography color="primary" variant='subtitle2'>Pages</Typography>  
                     </Link>
-                    <Link color="inherit" href="/getting-started/installation/" >
+                    <Link color="inherit" href="/" >
                         <Typography color="primary" variant='subtitle2'>Light Version</Typography>                      
                     </Link>
 

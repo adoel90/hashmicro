@@ -13,6 +13,7 @@ import logo from '../images/logowhite.png'
 const useStyles = makeStyles((theme) => ({
 
     icon: {
+        boxShadow: 'inset 0 0 4px white',
         color: `${theme.palette.common.white}`, 
         border: `1px solid ${theme.palette.common.white}`, 
         opacity: 0.8,
@@ -29,18 +30,20 @@ const useStyles = makeStyles((theme) => ({
             borderBottom: `1px solid ${theme.palette.common.white}`
           },
         '&:hover':{
-            border: `1px dashed ${theme.palette.secondary.light}`, 
+            border: `1px solid ${theme.palette.secondary.light}`, 
             color: `${theme.palette.secondary.light}`, 
+            boxShadow: 'inset 0 0 0 white',
         }
             
     },
     iconWithoutLine: {
+        boxShadow: 'inset 0 0 4px white',
         color: `${theme.palette.common.white}`, 
         border: "1px solid white", 
         opacity: 0.8,
         marginLeft: 16,
         '&:hover':{
-            border: `1px dashed ${theme.palette.secondary.light}`, 
+            border: `1px solid ${theme.palette.secondary.light}`, 
             color: `${theme.palette.secondary.light}`, 
         }  
     }
