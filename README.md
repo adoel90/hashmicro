@@ -1,17 +1,16 @@
-## Available Scripts
+### Cara running project
 
-In the project directory, you can run:
+- Install node.js v12.18.2
 
-### `yarn start`
+- git clone https://github.com/adoel90/hashmicro 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Install dependencies dengan cara ketik "yarn" pada console terminal
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- Running on local server : "yarn start"
 
-#### Deploy to netlify
+- Akses http://localhost:3000
 
-- https://suspicious-nobel-0da570.netlify.app/
 
-- https://github.com/adoel90/hashmicro
+### Or if you want to know page quickly (i have deployed to netlify)
+
+- Akses "https://suspicious-nobel-0da570.netlify.app/"
