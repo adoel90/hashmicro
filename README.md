@@ -1,4 +1,4 @@
-### Cara running project
+### Running project
 
 - Install node.js v12.18.2
 
